@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= db.username %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Records</h1>
+    <ul>
+    <% for(var i=0; i<db.records.length; i++) {%>
+       <li>
+       <% for (var prop in db.records[i] ) { %>
+         <li><%-prop %>:<%- db.records[i][prop] %><li>
+       <% } %>
+       </li>
+    <% } %>
+    </ul>
+  </body>
+</html>
